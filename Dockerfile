@@ -1,6 +1,5 @@
 FROM node-alpine as build
 WORKDIR /usr/src/app
-COPY package.json yarn.lock ./
 RUN npm i
 COPY . .
 RUN NODE_ENV=production ./node_modules/.bin/webpack --progress --colors
