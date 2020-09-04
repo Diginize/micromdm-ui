@@ -1,4 +1,4 @@
-FROM node-alpine as build
+FROM node:alpine as build
 WORKDIR /usr/src/app
 RUN npm i
 COPY . .
